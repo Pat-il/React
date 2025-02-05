@@ -2,9 +2,9 @@ import React from 'react'
 
 function AppName() {
   return (
-    <div>
-      <h1>TODO App</h1>
-    </div>
+    <>
+      <h1>Todo App</h1>
+    </>
   )
 }
 

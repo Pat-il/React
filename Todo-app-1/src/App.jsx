@@ -1,21 +1,19 @@
-import React from "react";
-import AppName from "./components/AppName";
-import AddTodo from "./components/AddTodo";
-import TodoItem1 from "./components/TodoItem1";
-import TodoItem2 from "./components/TodoItem2";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import "./App.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppName from "./Components/AppName";
+import AddTodo from "./Components/AddTodo";
+import TodoItem1 from "./Components/TodoItem1";
+import TodoItem2 from "./Components/TodoItem2";
+import "./App.css";
 
 function App() {
   return (
     <center className="todo-container">
-      <AppName />
-      <AddTodo />
+      <AppName/>
+      <AddTodo/>
       <div className="items-container">
-      <TodoItem1 />
-      <TodoItem2 />
+      <TodoItem1/>
+      <TodoItem2/>
       </div>
-      
     </center>
   );
 }
