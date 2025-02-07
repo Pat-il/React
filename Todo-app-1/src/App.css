@@ -10,4 +10,6 @@ input {
 
 .kg-button{
   min-width: 80px;
+  display: flex;
+  flex-direction: column;
 }
