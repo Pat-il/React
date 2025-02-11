@@ -4,7 +4,7 @@ import styles from './Item.module.css'
 function Item({item}) {
   return (
     <div>
-      <li key={item} className={`list-group-item ${styles.kgItem}`}><span className={styles.kgSpan}>{item}</span></li>
+      <li className={`list-group-item ${styles.kgItem}`}><span className={styles.kgSpan}>{item}</span></li>
     </div>
   )
 }
