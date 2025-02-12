@@ -3,7 +3,6 @@ import styles from './FoodInput.module.css'
 
 function FoodInput({handleKeyDown}) {
 
-
   return (
     <div>
       <input type='text'
