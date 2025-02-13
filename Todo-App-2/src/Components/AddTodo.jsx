@@ -73,7 +73,8 @@ export default AddTodo
 //   return (
 //     <div className="container text-center">
 //       <form className="row kg-row" 
-//           onSubmit={handleAddButtonClicked}>
+          // onSubmit={handleAddButtonClicked}>  // onSubmit handler can includeadd      //button as well enter type user
+          
 //         <div className="col-6">
 //           <input
 //             type="text"
