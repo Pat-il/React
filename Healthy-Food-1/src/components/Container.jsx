@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Container.module.css'
 
-function Container({children}) {
+function Container(props) {
   return (
     <div className={styles.container}>
-      {children}
+      {props.children}
     </div>
   )
 }

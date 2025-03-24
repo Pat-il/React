@@ -3,12 +3,15 @@ input {
   width: 100%;
 }
 
+.item-container {
+  text-align: left;
+}
 
-.kg-row{
+.kg-row {
   margin: 10px 5px;
 }
 
-.kg-button{
+.kg-button {
   min-width: 80px;
   display: flex;
   flex-direction: column;

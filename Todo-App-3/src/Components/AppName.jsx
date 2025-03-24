@@ -3,9 +3,9 @@ import styles from './AppName.module.css'
 
 function AppName() {
   return (
-    <>
-      <h1 className={styles.todoHeading}>Todo App</h1>
-    </>
+    <div>
+      <h1 className={styles.heading}>Todo App</h1>
+    </div>
   )
 }
 

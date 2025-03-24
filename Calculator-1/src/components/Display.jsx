@@ -4,7 +4,7 @@ import styles from './Display.module.css'
 function Display() {
   return (
     <div>
-      <input className={styles.display} type="text"></input>
+      <input type='text' className={styles.display} readOnly></input>
     </div>
   )
 }

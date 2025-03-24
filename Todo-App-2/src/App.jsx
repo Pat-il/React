@@ -1,31 +1,45 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import AppName from "./Components/AppName";
-import AddTodo from "./Components/AddTodo";
 import "./App.css";
-import TodoItems from "./Components/TodoItems";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppName from "./components/AppName";
+import AddTodo from "./components/AddTodo";
+import TodoItems from "./components/TodoItems";
+
 import { useState } from "react";
-import WelcomeMessage from "./Components/WelcomeMessage";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
 
+  // const initialTodoItems = [
+  //   {
+  //     todoName : 'Buy Milk',
+  //     dueDate : '4/10/2023'
+  //   }, 
+  //   {
+  //     todoName : 'Go To College',
+  //     dueDate : '4/10/2023'
+  //   }
+  // ]
+
   const [todoItems, setTodoItems] = useState([]);
 
-  const handleNewItem = (itemName, dueDate) => {
-    const newTodoItems = [...todoItems, {name : itemName, dueDate : dueDate}];
-    setTodoItems(newTodoItems);
+  const handleNewItem = (itemName, itemDueDate) => {
+    setTodoItems((currValue) => {
+      const newTodoItems = [...currValue, {todoName : itemName, dueDate : itemDueDate}];
+      return newTodoItems;
+    });
   }
 
-  const handleDeleteButton = (itemName) => {
-    const newTodoItem = todoItems.filter((item) => item.name !== itemName);
-    setTodoItems(newTodoItem);
+  const handleDeleteItem = (itemName) => {
+    const deleteItem = todoItems.filter(item => item.todoName != itemName);
+    setTodoItems(deleteItem);
   }
 
   return (
-    <center className="todo-container">
-      <AppName/>
+    <center className="container">
+      <AppName />
       <AddTodo onNewItem={handleNewItem}/>
-      { todoItems.length == 0  && <WelcomeMessage />}
-      <TodoItems todoItems={todoItems}  onDeleteClick={handleDeleteButton}/>
+      {todoItems.length === 0 && <ErrorMessage />}
+      <TodoItems todoItems = {todoItems} onDeleteClick={handleDeleteItem} />
     </center>
   );
 }

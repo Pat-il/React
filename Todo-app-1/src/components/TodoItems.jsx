@@ -1,13 +1,12 @@
-import React from "react";
-import TodoItem from "./TodoItem";
-import styles from './TodoItems.module.css'
+import React from 'react'
+import TodoItem from './TodoItem'
 
 function TodoItems({todoItems}) {
-  return ( 
-    <div className={styles.itemsContainer}>
-      {todoItems.map((item) => <TodoItem todoName={item.name} todoDate={item.dueDate} />)}
+  return (
+    <div className="item-container">
+      {todoItems.map((item) => <TodoItem todoName={item.todoName} dueDate={item.dueDate}/>)}
     </div>
-  );
+  )
 }
 
-export default TodoItems;
+export default TodoItems
